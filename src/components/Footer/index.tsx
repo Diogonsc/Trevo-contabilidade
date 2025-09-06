@@ -1,4 +1,4 @@
-import logo from "@/assets/logotipo.png"
+import logo from "/logotipo.png"
 import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Clock } from "lucide-react"
 
 export function Footer() {

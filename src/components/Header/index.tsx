@@ -9,7 +9,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
-import logo from "@/assets/logotipo.png";
+import logo from "/logotipo.png";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);

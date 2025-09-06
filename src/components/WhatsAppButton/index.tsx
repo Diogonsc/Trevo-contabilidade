@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { FaWhatsapp, FaTimes } from 'react-icons/fa';
 import { Card, CardContent } from '@/components/ui/card';
-import logo from '@/assets/logotipo.png';
+import logo from '/logotipo.png';
 
 export const WhatsAppButton = () => {
   const [showTooltip, setShowTooltip] = useState(false);

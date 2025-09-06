@@ -8,7 +8,6 @@ import {
   Heart,
   Coffee,
   ArrowRight,
-  CheckCircle,
   Star
 } from "lucide-react";
 
