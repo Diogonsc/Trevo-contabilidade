@@ -144,9 +144,9 @@ export const WhatsAppButton = () => {
                 
                 <button
                   onClick={handleWhatsAppClick}
-                  className={`w-full ${
+                  className={`w-full p-6 uppercase tracking-wider cursor-pointer ${
                     isOnline 
-                      ? 'bg-green-500 hover:bg-green-600' 
+                      ? 'bg-primary/90 hover:bg-primary/80' 
                       : 'bg-gray-500 hover:bg-gray-600'
                   } text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors`}
                 >

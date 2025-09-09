@@ -10,9 +10,9 @@ export function Footer() {
 						{/* Logo e Descrição */}
 						<div className="space-y-4">
 							<img src={logo} alt="Trevo Contabilidade" className="w-auto h-12" />
-							<p className="text-sm text-muted">
-								Soluções contábeis completas para sua empresa crescer com segurança e transparência.
-							</p>
+					<p className="text-sm font-zurich-regular text-muted">
+						Soluções contábeis completas para sua empresa crescer com segurança e transparência.
+					</p>
 							{/* Redes Sociais */}
 							<div className="flex space-x-4">
 								<a 
@@ -41,59 +41,59 @@ export function Footer() {
 
 						{/* Menu */}
 						<div className="space-y-4">
-							<h3 className="font-semibold text-lg text-primary">Menu</h3>
+							<h3 className="font-zurich-bold text-lg text-primary">Menu</h3>
 							<nav className="space-y-2">
-								<a href="#" className="block text-sm text-muted hover:text-primary transition-colors">
-									Início
-								</a>
-								<a href="#" className="block text-sm text-muted hover:text-primary transition-colors">
-									Serviços
-								</a>
-								<a href="#" className="block text-sm text-muted hover:text-primary transition-colors">
-									Sobre Nós
-								</a>
-								<a href="#" className="block text-sm text-muted hover:text-primary transition-colors">
-									Contato
-								</a>
-								<a href="#" className="block text-sm text-muted hover:text-primary transition-colors">
-									Blog
-								</a>
+							<a href="#" className="block text-sm font-zurich-regular text-muted hover:text-primary transition-colors">
+								Início
+							</a>
+							<a href="#" className="block text-sm font-zurich-regular text-muted hover:text-primary transition-colors">
+								Serviços
+							</a>
+							<a href="#" className="block text-sm font-zurich-regular text-muted hover:text-primary transition-colors">
+								Sobre Nós
+							</a>
+							<a href="#" className="block text-sm font-zurich-regular text-muted hover:text-primary transition-colors">
+								Contato
+							</a>
+							<a href="#" className="block text-sm font-zurich-regular text-muted hover:text-primary transition-colors">
+								Blog
+							</a>
 							</nav>
 						</div>
 
 						{/* Contato */}
 						<div className="space-y-4">
-							<h3 className="font-semibold text-lg text-primary">Contato</h3>
+							<h3 className="font-zurich-bold text-lg text-primary">Contato</h3>
 							<div className="space-y-3">
 								<div className="flex items-center space-x-3">
 									<Phone size={16} className="text-primary" />
-									<span className="text-sm text-muted">+55 21 3547-2077</span>
+									<span className="text-sm font-zurich-regular text-muted">+55 21 3547-2077</span>
 								</div>
 								<div className="flex items-center space-x-3">
 									<Mail size={16} className="text-primary" />
-									<span className="text-sm text-muted">contato@trevocontabilidade.com</span>
+									<span className="text-sm font-zurich-regular text-muted">contato@trevocontabilidade.com</span>
 								</div>
 							</div>
 						</div>
 
 						{/* Endereço e Horário */}
 						<div className="space-y-4">
-							<h3 className="font-semibold text-lg text-primary">Localização</h3>
+							<h3 className="font-zurich-bold text-lg text-primary">Localização</h3>
 							<div className="space-y-3">
 								<div className="flex items-start space-x-3">
 									<MapPin size={16} className="text-primary mt-0.5" />
-									<span className="text-sm text-muted">
-										Avenida Isabel, 15, Casa 2<br />
-										Rio de Janeiro, Rio de Janeiro<br />
-										23515160
-									</span>
+								<span className="text-sm font-zurich-regular text-muted">
+									Avenida Isabel, 15, Casa 2<br />
+									Rio de Janeiro, Rio de Janeiro<br />
+									23515160
+								</span>
 								</div>
 								<div className="flex items-start space-x-3">
 									<Clock size={16} className="text-primary mt-0.5" />
 									<div className="text-sm text-muted">
-										<p className="font-medium text-muted">Horário de Funcionamento:</p>
-										<p>Seg - Sex: 09:00 - 17:00</p>
-										<p className="text-xs text-muted">Abre seg. às 09:00</p>
+									<p className="font-zurich-medium text-muted">Horário de Funcionamento:</p>
+									<p className="font-zurich-regular">Seg - Sex: 09:00 - 17:00</p>
+									<p className="text-xs font-zurich-regular text-muted">Abre seg. às 09:00</p>
 									</div>
 								</div>
 							</div>
@@ -106,14 +106,14 @@ export function Footer() {
 			<div className="mt-8 py-8 bg-primary w-full">
 				<div className="w-full max-w-7xl mx-auto px-6 lg:px-8">
 					<div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-						<p className="text-sm text-muted">
+						<p className="text-sm font-zurich-regular text-muted">
 							© {new Date().getFullYear()} Trevo Contabilidade. Todos os direitos reservados.
 						</p>
 						<div className="flex space-x-6">
-							<a href="#" className="text-sm text-muted hover:text-primary transition-colors">
+							<a href="#" className="text-sm font-zurich-regular text-muted hover:text-primary transition-colors">
 								Política de Privacidade
 							</a>
-							<a href="#" className="text-sm text-muted hover:text-primary transition-colors">
+							<a href="#" className="text-sm font-zurich-regular text-muted hover:text-primary transition-colors">
 								Termos de Uso
 							</a>
 						</div>

@@ -1,12 +1,80 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* Fontes personalizadas - Zurich */
+@font-face {
+  font-family: 'Zurich';
+  src: url('./assets/fonts/Zurich BT Roman.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Zurich';
+  src: url('./assets/fonts/Zurich BT Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Zurich';
+  src: url('./assets/fonts/Zurich BT Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Zurich';
+  src: url('./assets/fonts/Zurich BT Bold Italic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Zurich';
+  src: url('./assets/fonts/Zurich Lt BT Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Zurich';
+  src: url('./assets/fonts/Zurich Lt BT Light Italic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Zurich';
+  src: url('./assets/fonts/Zurich Black BT.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Zurich';
+  src: url('./assets/fonts/Zurich Black Italic BT.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  
+  /* Fontes personalizadas */
+  --font-family-zurich: 'Zurich', ui-sans-serif, system-ui, sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -95,6 +163,36 @@
       linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
       linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
     background-size: 20px 20px;
+  }
+  
+  /* Classes para fonte Zurich */
+  .font-zurich {
+    font-family: var(--font-family-zurich);
+  }
+  
+  .font-zurich-light {
+    font-family: var(--font-family-zurich);
+    font-weight: 300;
+  }
+  
+  .font-zurich-regular {
+    font-family: var(--font-family-zurich);
+    font-weight: 400;
+  }
+  
+  .font-zurich-bold {
+    font-family: var(--font-family-zurich);
+    font-weight: 700;
+  }
+  
+  .font-zurich-black {
+    font-family: var(--font-family-zurich);
+    font-weight: 900;
+  }
+  
+  .font-zurich-italic {
+    font-family: var(--font-family-zurich);
+    font-style: italic;
   }
   
   .text-gradient {
@@ -198,6 +296,100 @@
   .animate-bounce-in {
     animation: bounceIn 0.5s ease-out forwards;
   }
+  
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .animate-fade-in-up {
+    animation: fadeInUp 0.4s ease-out forwards;
+  }
+  
+  .animate-scale-in {
+    animation: scaleIn 0.3s ease-out forwards;
+  }
+  
+  /* Melhorias específicas para dispositivos móveis pequenos */
+  @media (max-width: 375px) {
+    .mobile-menu-compact {
+      padding: 0.75rem;
+    }
+    
+    .mobile-menu-item {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.875rem;
+    }
+    
+    .mobile-menu-icon {
+      width: 2rem;
+      height: 2rem;
+    }
+    
+    .mobile-menu-text {
+      font-size: 0.875rem;
+    }
+  }
+  
+  /* Otimizações para telas muito pequenas */
+  @media (max-width: 320px) {
+    .mobile-menu-compact {
+      padding: 0.5rem;
+    }
+    
+    .mobile-menu-item {
+      padding: 0.375rem 0.5rem;
+      font-size: 0.8125rem;
+    }
+    
+    .mobile-menu-icon {
+      width: 1.75rem;
+      height: 1.75rem;
+    }
+    
+    .mobile-menu-text {
+      font-size: 0.8125rem;
+    }
+  }
 }
 
 /* Animação de pulso para o botão do WhatsApp */
@@ -272,4 +464,14 @@ html {
   ::-webkit-scrollbar-track {
     padding: 5px;
   }
+}
+
+.stroke-text {
+  -webkit-text-stroke: 0.0001rem #ffffff68;      /* contorno perfeito no Chrome/Edge/Safari */
+  -webkit-text-fill-color: var(--primary);   /* mesmo verde do Tailwind "text-primary" */
+  text-shadow:                        /* fallback para Firefox */
+    -1px -1px 0 #ffffff68,
+     1px -1px 0 #ffffff68,
+    -1px  1px 0 #ffffff68,
+     1px  1px 0 #ffffff68;
 }

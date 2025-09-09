@@ -409,12 +409,12 @@ export function Blog() {
             Blog & Dicas
           </Badge>
           
-          <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl lg:text-5xl font-zurich-bold text-foreground mb-6">
             Conhecimento para seu{" "}
             <span className="text-primary">sucesso</span>
           </h2>
           
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl font-zurich-regular text-muted-foreground max-w-3xl mx-auto">
             Dicas práticas, insights e orientações especializadas para ajudar 
             você a tomar as melhores decisões para seu negócio.
           </p>
@@ -426,7 +426,7 @@ export function Blog() {
             <button
               key={index}
               onClick={() => setSelectedCategory(category.name)}
-              className={`flex items-center px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+              className={`flex items-center px-4 py-2 rounded-full text-sm font-zurich-medium transition-colors ${
                 selectedCategory === category.name
                   ? 'bg-primary text-primary-foreground' 
                   : 'bg-background border border-border text-muted-foreground hover:bg-primary/10 hover:text-primary'
@@ -457,11 +457,11 @@ export function Blog() {
                       </Badge>
                     </div>
                     
-                    <CardTitle className="text-2xl lg:text-3xl font-bold text-foreground leading-tight">
+                    <CardTitle className="text-2xl lg:text-3xl font-zurich-bold text-foreground leading-tight">
                       {post.title}
                     </CardTitle>
                     
-                    <p className="text-muted-foreground text-lg leading-relaxed">
+                    <p className="font-zurich-regular text-muted-foreground text-lg leading-relaxed">
                       {post.excerpt}
                     </p>
                     
@@ -479,7 +479,7 @@ export function Blog() {
                       </div>
                     </div>
                     
-                    <Button size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground uppercase font-bold tracking-wider">
+                    <Button size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground uppercase font-zurich-bold tracking-wider">
                       Ler Artigo Completo
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
@@ -511,12 +511,12 @@ export function Blog() {
                     <post.icon className="w-6 h-6" />
                   </div>
                 </div>
-                <CardTitle className="text-lg font-semibold text-foreground leading-tight">
+                <CardTitle className="text-lg font-zurich-bold text-foreground leading-tight">
                   {post.title}
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="font-zurich-regular text-muted-foreground text-sm leading-relaxed">
                   {post.excerpt}
                 </p>
                 
@@ -534,7 +534,7 @@ export function Blog() {
                 <Button 
                   variant="outline" 
                   size="sm" 
-                  className="w-full border-primary text-primary hover:bg-primary/10 py-3 px-4 min-h-[44px] uppercase font-bold tracking-wider"
+                  className="w-full border-primary text-primary hover:bg-primary/10 py-3 px-4 min-h-[44px] uppercase font-zurich-bold tracking-wider"
                   onClick={() => setSelectedModal(post.id)}
                 >
                   Ler Mais
@@ -548,10 +548,10 @@ export function Blog() {
         {/* CTA Section */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-primary to-primary/80 rounded-2xl p-8 lg:p-12 text-primary-foreground">
-            <h3 className="text-2xl lg:text-3xl font-bold mb-4">
+            <h3 className="text-2xl lg:text-3xl font-zurich-bold mb-4">
               Quer receber nossas dicas por e-mail?
             </h3>
-            <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
+            <p className="text-lg font-zurich-regular mb-8 opacity-90 max-w-2xl mx-auto">
               Inscreva-se em nossa newsletter e receba conteúdo exclusivo 
               sobre contabilidade, gestão e crescimento empresarial.
             </p>
@@ -564,7 +564,7 @@ export function Blog() {
               <Button 
                 size="lg" 
                 variant="secondary"
-                className="bg-background text-foreground hover:bg-background/90 uppercase font-bold tracking-wider"
+                className="bg-background text-foreground hover:bg-background/90 uppercase font-zurich-bold tracking-wider"
               >
                 Inscrever-se
               </Button>
@@ -594,7 +594,7 @@ export function Blog() {
                           {post.readTime} de leitura
                         </Badge>
                       </div>
-                      <DialogTitle className="text-2xl font-bold text-foreground">
+                      <DialogTitle className="text-2xl font-zurich-bold text-foreground">
                         {post.title}
                       </DialogTitle>
                       <div className="flex items-center gap-4 mt-2 text-sm text-muted-foreground">
@@ -625,18 +625,18 @@ export function Blog() {
                   <div className="space-y-6">
                     {/* Resumo do artigo */}
                     <div className="bg-primary/5 rounded-lg p-6">
-                      <h3 className="text-lg font-semibold text-foreground mb-2 flex items-center gap-2">
+                      <h3 className="text-lg font-zurich-bold text-foreground mb-2 flex items-center gap-2">
                         <FileText className="w-5 h-5 text-primary" />
                         Resumo
                       </h3>
-                      <p className="text-muted-foreground leading-relaxed">
+                      <p className="font-zurich-regular text-muted-foreground leading-relaxed">
                         {post?.excerpt}
                       </p>
                     </div>
 
                     {/* Conteúdo principal */}
                     <div>
-                      <h3 className="text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
+                      <h3 className="text-lg font-zurich-bold text-foreground mb-4 flex items-center gap-2">
                         <TrendingUp className="w-5 h-5 text-primary" />
                         Conteúdo Completo
                       </h3>
@@ -649,13 +649,13 @@ export function Blog() {
 
                     {/* Call to Action */}
                     <div className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-lg p-6 text-center">
-                      <h3 className="text-lg font-semibold text-foreground mb-2">
+                      <h3 className="text-lg font-zurich-bold text-foreground mb-2">
                         Precisa de ajuda com sua contabilidade?
                       </h3>
-                      <p className="text-muted-foreground mb-4">
+                      <p className="font-zurich-regular text-muted-foreground mb-4">
                         Nossa equipe está pronta para auxiliar você com todas as questões contábeis e fiscais.
                       </p>
-                      <Button className="bg-primary hover:bg-primary/90 text-primary-foreground uppercase font-bold tracking-wider">
+                      <Button className="bg-primary hover:bg-primary/90 text-primary-foreground uppercase font-zurich-bold tracking-wider">
                         Falar com Especialista
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </Button>

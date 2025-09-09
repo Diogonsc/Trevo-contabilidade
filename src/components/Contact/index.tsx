@@ -106,10 +106,10 @@ export function Contact() {
               <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <CheckCircle className="w-10 h-10 text-green-600" />
               </div>
-              <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
+              <h2 className="text-2xl lg:text-3xl font-zurich-bold text-foreground mb-4">
                 Mensagem Enviada com Sucesso!
               </h2>
-              <p className="text-muted-foreground mb-6">
+              <p className="font-zurich-regular text-muted-foreground mb-6">
                 Obrigado pelo seu interesse! Nossa equipe entrará em contato em breve 
                 para discutir como podemos ajudar seu negócio.
               </p>
@@ -134,12 +134,12 @@ export function Contact() {
             Entre em Contato
           </Badge>
           
-          <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl lg:text-5xl font-zurich-bold text-foreground mb-6">
             Vamos conversar sobre seu{" "}
             <span className="text-primary">negócio</span>
           </h2>
           
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl font-zurich-regular text-muted-foreground max-w-3xl mx-auto">
             Estamos aqui para ajudar! Entre em contato conosco e descubra como 
             podemos transformar a gestão contábil da sua empresa.
           </p>
@@ -149,13 +149,13 @@ export function Contact() {
           {/* Contact Form */}
           <Card>
             <CardContent className="p-8 lg:p-12">
-              <h3 className="text-2xl font-semibold text-foreground mb-6">
+              <h3 className="text-2xl font-zurich-bold text-foreground mb-6">
                 Solicite seu Orçamento Gratuito
               </h3>
               
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                  <label htmlFor="name" className="block text-sm font-zurich-medium text-foreground mb-2">
                     Nome Completo *
                   </label>
                   <Input
@@ -170,7 +170,7 @@ export function Contact() {
                 </div>
                 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                  <label htmlFor="email" className="block text-sm font-zurich-medium text-foreground mb-2">
                     E-mail *
                   </label>
                   <Input
@@ -185,7 +185,7 @@ export function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
+                  <label htmlFor="phone" className="block text-sm font-zurich-medium text-foreground mb-2">
                     Telefone *
                   </label>
                   <Input
@@ -200,7 +200,7 @@ export function Contact() {
                 </div>
                 
                 <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-foreground mb-2">
+                  <label htmlFor="company" className="block text-sm font-zurich-medium text-foreground mb-2">
                     Empresa
                   </label>
                   <Input
@@ -214,7 +214,7 @@ export function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-foreground mb-2">
+                  <label htmlFor="service" className="block text-sm font-zurich-medium text-foreground mb-2">
                     Serviço de Interesse
                   </label>
                   <Select value={formData.service} onValueChange={(value) => setFormData(prev => ({ ...prev, service: value }))}>
@@ -232,7 +232,7 @@ export function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                  <label htmlFor="message" className="block text-sm font-zurich-medium text-foreground mb-2">
                     Mensagem
                   </label>
                   <Textarea
@@ -248,7 +248,7 @@ export function Contact() {
                 <Button 
                   type="submit" 
                   size="lg" 
-                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground uppercase font-bold tracking-wider"
+                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground uppercase font-zurich-bold tracking-wider"
                 >
                   Enviar Mensagem
                   <Send className="w-4 h-4 ml-2" />
@@ -260,7 +260,7 @@ export function Contact() {
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-semibold text-foreground mb-6">
+              <h3 className="text-2xl font-zurich-bold text-foreground mb-6">
                 Informações de Contato
               </h3>
               <div className="space-y-6">
@@ -270,13 +270,13 @@ export function Contact() {
                       <info.icon className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground">
+                      <h4 className="font-zurich-bold text-foreground">
                         {info.title}
                       </h4>
-                      <p className="text-primary font-medium">
+                      <p className="text-primary font-zurich-medium">
                         {info.info}
                       </p>
-                      <p className="text-sm text-muted-foreground">
+                      <p className="text-sm font-zurich-regular text-muted-foreground">
                         {info.description}
                       </p>
                     </div>
@@ -292,16 +292,16 @@ export function Contact() {
                   <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto">
                     <Coffee className="w-8 h-8 text-primary" />
                   </div>
-                  <h4 className="text-xl font-semibold text-foreground">
+                  <h4 className="text-xl font-zurich-bold text-foreground">
                     Pronto para começar?
                   </h4>
-                  <p className="text-muted-foreground">
+                  <p className="font-zurich-regular text-muted-foreground">
                     Agende uma consulta gratuita e descubra como podemos 
                     ajudar seu negócio a crescer.
                   </p>
                   <Button 
                     size="lg" 
-                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground uppercase font-bold tracking-wider"
+                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground uppercase font-zurich-bold tracking-wider"
                     onClick={() => {
                       window.open('https://api.whatsapp.com/send?phone=552135472077&text=Olá, gostaria de agendar uma consulta gratuita', '_blank');
                     }}

@@ -58,12 +58,12 @@ export function FAQ() {
             Perguntas Frequentes
           </Badge>
           
-          <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl lg:text-5xl font-zurich-bold text-foreground mb-6">
             Dúvidas? Estamos aqui para{" "}
             <span className="text-primary">ajudar</span>
           </h2>
           
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl font-zurich-regular text-muted-foreground max-w-3xl mx-auto">
             Reunimos as perguntas mais comuns dos nossos clientes. 
             Se não encontrar sua dúvida aqui, entre em contato conosco!
           </p>
@@ -74,10 +74,10 @@ export function FAQ() {
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`} className="border border-border rounded-2xl px-6">
-                <AccordionTrigger className="text-lg font-semibold text-foreground hover:no-underline hover:text-primary transition-colors">
+                <AccordionTrigger className="text-lg font-zurich-bold text-foreground hover:no-underline hover:text-primary transition-colors">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed pt-4">
+                <AccordionContent className="font-zurich-regular text-muted-foreground leading-relaxed pt-4">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -91,10 +91,10 @@ export function FAQ() {
             <div className="w-16 h-16 bg-background/20 rounded-full flex items-center justify-center mx-auto mb-6">
               <Coffee className="w-8 h-8" />
             </div>
-            <h3 className="text-2xl lg:text-3xl font-bold mb-4">
+            <h3 className="text-2xl lg:text-3xl font-zurich-bold mb-4">
               Ainda tem dúvidas?
             </h3>
-            <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
+            <p className="text-lg font-zurich-regular mb-8 opacity-90 max-w-2xl mx-auto">
               Nossa equipe está pronta para esclarecer todas as suas questões. 
               Entre em contato e receba orientação personalizada para seu negócio.
             </p>
@@ -102,7 +102,7 @@ export function FAQ() {
               <Button 
                 size="lg" 
                 variant="secondary"
-                className="bg-background text-foreground hover:bg-background/90 uppercase font-bold tracking-wider"
+                className="bg-background text-foreground hover:bg-background/90 uppercase font-zurich-bold tracking-wider"
                 onClick={() => {
                   window.open('https://api.whatsapp.com/send?phone=552135472077&text=Olá, gostaria de falar com um especialista', '_blank');
                 }}
@@ -112,7 +112,7 @@ export function FAQ() {
               <Button 
                 size="lg" 
                 variant="outline"
-                className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 uppercase font-bold tracking-wider"
+                className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 uppercase font-zurich-bold tracking-wider"
                 onClick={() => {
                   window.open('https://api.whatsapp.com/send?phone=552135472077&text=Olá, gostaria de agendar uma consulta gratuita', '_blank');
                 }}
