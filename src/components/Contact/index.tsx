@@ -248,7 +248,7 @@ export function Contact() {
                 <Button 
                   type="submit" 
                   size="lg" 
-                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground uppercase font-bold tracking-wider"
                 >
                   Enviar Mensagem
                   <Send className="w-4 h-4 ml-2" />
@@ -301,7 +301,10 @@ export function Contact() {
                   </p>
                   <Button 
                     size="lg" 
-                    className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground uppercase font-bold tracking-wider"
+                    onClick={() => {
+                      window.open('https://api.whatsapp.com/send?phone=552135472077&text=Olá, gostaria de agendar uma consulta gratuita', '_blank');
+                    }}
                   >
                     Agendar Consulta
                   </Button>

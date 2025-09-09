@@ -102,14 +102,20 @@ export function FAQ() {
               <Button 
                 size="lg" 
                 variant="secondary"
-                className="bg-background text-foreground hover:bg-background/90"
+                className="bg-background text-foreground hover:bg-background/90 uppercase font-bold tracking-wider"
+                onClick={() => {
+                  window.open('https://api.whatsapp.com/send?phone=552135472077&text=Olá, gostaria de falar com um especialista', '_blank');
+                }}
               >
                 Falar com Especialista
               </Button>
               <Button 
                 size="lg" 
                 variant="outline"
-                className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10"
+                className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 uppercase font-bold tracking-wider"
+                onClick={() => {
+                  window.open('https://api.whatsapp.com/send?phone=552135472077&text=Olá, gostaria de agendar uma consulta gratuita', '_blank');
+                }}
               >
                 Agendar Consulta Gratuita
               </Button>

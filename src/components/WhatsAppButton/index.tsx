@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { FaWhatsapp, FaTimes } from 'react-icons/fa';
 import { Card, CardContent } from '@/components/ui/card';
-import logo from '/logotipo.png';
+import logo from '/logo-insta.png';
 
 export const WhatsAppButton = () => {
   const [showTooltip, setShowTooltip] = useState(false);
@@ -110,10 +110,8 @@ export const WhatsAppButton = () => {
               
               <div className="pr-6">
                 <div className="flex items-center gap-3 mb-3">
-                  <div className={`w-16 h-10 border-2 border-primary ${
-                    isOnline ? 'bg-white' : 'bg-white'
-                  } flex items-center justify-center p-2`}>
-                    <img src={logo} alt="logotipo" className="w-auto h-12 text-white object-contain" />
+                  <div className={`w-16 h-10 flex items-center justify-center p-2`}>
+                    <img src={logo} alt="logo-insta" className="w-auto h-12 text-white object-contain" />
                   </div>
                   <div>
                     <div className="font-semibold text-primary">Trevo Contabilidade</div>

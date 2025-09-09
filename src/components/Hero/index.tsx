@@ -17,7 +17,7 @@ export function Hero() {
 			<div 
 				className="absolute inset-0"
 				style={{
-					background: 'linear-gradient(to bottom, rgba(49, 147, 0, 0.25) 0%, rgba(255, 255, 255, 0.6) 50%, rgba(49, 147, 0, 0.3) 100%)'
+					background: 'linear-gradient(180deg, rgba(49, 147, 0, 0.25) 0%, rgba(255, 255, 255, 0.6) 50%, rgba(49, 147, 0, 0.3) 100%)'
 				}}
 			></div>
 			
@@ -60,11 +60,25 @@ export function Hero() {
 
 						{/* CTAs */}
 						<div className="flex flex-col sm:flex-row gap-4">
-							<Button size="lg" className="p-6 bg-primary hover:bg-primary/90 text-primary-foreground font-medium cursor-pointer">
+							<Button size="lg" className="p-6 bg-primary hover:bg-primary/90 text-primary-foreground font-medium uppercase font-bold cursor-pointer tracking-wider" onClick={() => {
+								window.open('https://api.whatsapp.com/send?phone=552135472077&text=Olá, gostaria de solicitar um orçamento', '_blank');
+							}}>
 								Solicitar Orçamento
 								<ArrowRight className="w-4 h-4 ml-2" />
 							</Button>
-							<Button size="lg" className="p-6 border-2 border-primary bg-transparent text-primary font-medium hover:bg-primary/10 cursor-pointer">
+							<Button 
+								size="lg" 
+								className="p-6 border-2 border-primary bg-transparent text-primary font-medium hover:bg-primary/10 uppercase font-bold tracking-wider cursor-pointer"
+								onClick={() => {
+									const servicosSection = document.getElementById('servicos');
+									if (servicosSection) {
+										servicosSection.scrollIntoView({ 
+											behavior: 'smooth',
+											block: 'start'
+										});
+									}
+								}}
+							>
 								Conhecer Serviços
 							</Button>
 						</div>

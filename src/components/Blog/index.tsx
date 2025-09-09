@@ -479,7 +479,7 @@ export function Blog() {
                       </div>
                     </div>
                     
-                    <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                    <Button size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground uppercase font-bold tracking-wider">
                       Ler Artigo Completo
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
@@ -534,7 +534,7 @@ export function Blog() {
                 <Button 
                   variant="outline" 
                   size="sm" 
-                  className="w-full border-primary text-primary hover:bg-primary/10 py-3 px-4 min-h-[44px]"
+                  className="w-full border-primary text-primary hover:bg-primary/10 py-3 px-4 min-h-[44px] uppercase font-bold tracking-wider"
                   onClick={() => setSelectedModal(post.id)}
                 >
                   Ler Mais
@@ -564,7 +564,7 @@ export function Blog() {
               <Button 
                 size="lg" 
                 variant="secondary"
-                className="bg-background text-foreground hover:bg-background/90"
+                className="bg-background text-foreground hover:bg-background/90 uppercase font-bold tracking-wider"
               >
                 Inscrever-se
               </Button>
@@ -655,7 +655,7 @@ export function Blog() {
                       <p className="text-muted-foreground mb-4">
                         Nossa equipe está pronta para auxiliar você com todas as questões contábeis e fiscais.
                       </p>
-                      <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                      <Button className="bg-primary hover:bg-primary/90 text-primary-foreground uppercase font-bold tracking-wider">
                         Falar com Especialista
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </Button>

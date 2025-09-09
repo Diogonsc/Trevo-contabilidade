@@ -143,7 +143,7 @@ export function About() {
               </p>
             </div>
 
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+            <Button size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground uppercase font-bold tracking-wider">
               Conhecer Nossa Equipe
               <ArrowRight className="w-4 h-4 ml-2" />
             </Button>

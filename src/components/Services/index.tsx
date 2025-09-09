@@ -106,7 +106,7 @@ export function Services() {
   ];
 
   return (
-    <section className="py-16 lg:py-24 bg-section-background">
+    <section id="servicos" className="py-16 lg:py-24 bg-section-background">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
@@ -164,7 +164,7 @@ export function Services() {
                   <Button 
                     variant="default" 
                     size="sm"
-                    className="w-full bg-primary text-primary-foreground hover:bg-primary/90 py-3 px-4 min-h-[44px]"
+                    className="w-full bg-primary text-primary-foreground hover:bg-primary/90 py-3 px-4 min-h-[44px] uppercase font-bold tracking-wider"
                     onClick={() => handleServiceClick(service)}
                   >
                     Saiba mais
@@ -189,7 +189,10 @@ export function Services() {
             <Button 
               size="lg" 
               variant="secondary"
-              className="bg-background text-foreground hover:bg-background/90"
+              className="bg-background text-foreground hover:bg-background/90 uppercase font-bold tracking-wider"
+              onClick={() => {
+                window.open('https://api.whatsapp.com/send?phone=552135472077&text=Olá, gostaria de solicitar um orçamento', '_blank');
+              }}
             >
               Solicitar Orçamento Gratuito
               <ArrowRight className="w-4 h-4 ml-2" />
@@ -197,7 +200,10 @@ export function Services() {
             <Button 
               size="lg" 
               variant="outline"
-              className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10"
+              className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 uppercase font-bold tracking-wider"
+              onClick={() => {
+                window.open('https://api.whatsapp.com/send?phone=552135472077&text=Olá, gostaria de falar com um especialista', '_blank');
+              }}
             >
               Falar com Especialista
             </Button>
