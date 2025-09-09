@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Home, Briefcase, Users, FileText, HelpCircle, Phone, Mail, MapPin } from "lucide-react";
+import { Menu, Home, Briefcase, Users, FileText, HelpCircle, Phone, Mail, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
