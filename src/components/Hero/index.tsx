@@ -72,43 +72,50 @@ export function Hero() {
 
 					{/* Imagem/Visual */}
 					<div className="relative">
-						<Card className="relative z-10 bg-gradient-to-br from-primary/20 to-primary/5 border-primary/20">
-							<CardContent className="p-8 lg:p-12">
+						<Card className="relative z-10 border-primary/20 overflow-hidden">
+							{/* Background com imagem e gradiente */}
+							<div 
+								className="absolute inset-0 bg-contain bg-top bg-no-repeat"
+								style={{
+									backgroundImage: 'url(/src/assets/cartao-trevo-hero.jpg)'
+								}}
+							/>
+							{/* Gradiente linear sobreposto */}
+							<div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-primary/60 to-primary/40" />
+							
+							<CardContent className="relative z-10 p-8 lg:p-12">
 								<div className="space-y-6">
-									<div className="text-center">
-										<div className="w-24 h-24 mx-auto bg-primary/20 rounded-full flex items-center justify-center mb-4">
-											<Coffee className="w-12 h-12 text-primary" />
-										</div>
-										<h3 className="text-xl font-semibold text-foreground mb-2">
+									<div className="text-center mt-24">
+										<h3 className="text-xl font-semibold text-white mb-2">
 											Qual o porte da sua empresa?
 										</h3>
-										<p className="text-muted-foreground">
+										<p className="text-white/90">
 											Descubra como podemos ajudar seu negócio a crescer
 										</p>
 									</div>
 									
 									<div className="space-y-3">
-										<Card className="bg-background/50">
+										<Card className="bg-white/20 backdrop-blur-sm border-white/20">
 											<CardContent className="p-3">
 												<div className="flex items-center justify-between">
-													<span className="text-sm font-medium">Microempresa</span>
-													<span className="text-xs text-muted-foreground">Até R$ 360k/ano</span>
+													<span className="text-md font-medium text-white">Microempresa</span>
+													<span className="text-md text-white/80">Até R$ 360k/ano</span>
 												</div>
 											</CardContent>
 										</Card>
-										<Card className="bg-background/50">
+										<Card className="bg-white/20 backdrop-blur-sm border-white/20">
 											<CardContent className="p-3">
 												<div className="flex items-center justify-between">
-													<span className="text-sm font-medium">Pequena Empresa</span>
-													<span className="text-xs text-muted-foreground">Até R$ 4,8M/ano</span>
+													<span className="text-md font-medium text-white">Pequena Empresa</span>
+													<span className="text-sm text-white/80">Até R$ 4,8M/ano</span>
 												</div>
 											</CardContent>
 										</Card>
-										<Card className="bg-background/50">
+										<Card className="bg-white/20 backdrop-blur-sm border-white/20">
 											<CardContent className="p-3">
 												<div className="flex items-center justify-between">
-													<span className="text-sm font-medium">Média Empresa</span>
-													<span className="text-xs text-muted-foreground">Até R$ 300M/ano</span>
+													<span className="text-md font-medium text-white">Média Empresa</span>
+													<span className="text-sm text-white/80">Até R$ 300M/ano</span>
 												</div>
 											</CardContent>
 										</Card>

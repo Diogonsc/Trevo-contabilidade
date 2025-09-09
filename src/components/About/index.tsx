@@ -1,6 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 import { 
   Award, 
   Users, 
@@ -12,6 +20,8 @@ import {
 } from "lucide-react";
 
 export function About() {
+  const autoplayPlugin = Autoplay({ delay: 4000, stopOnInteraction: true });
+
   const values = [
     {
       icon: Heart,
@@ -59,6 +69,24 @@ export function About() {
       name: "Ana Costa",
       company: "Costa Consultoria",
       text: "Atendimento excepcional e conhecimento técnico impecável. Nossa empresa cresceu muito com o apoio da Trevo.",
+      rating: 5
+    },
+    {
+      name: "Carlos Mendes",
+      company: "Mendes Tecnologia",
+      text: "Serviços contábeis de primeira qualidade. A Trevo nos ajudou a organizar toda nossa estrutura fiscal.",
+      rating: 5
+    },
+    {
+      name: "Fernanda Lima",
+      company: "Lima Advocacia",
+      text: "Parceria sólida e confiável. Sempre que precisamos de orientação contábil, a Trevo está pronta para ajudar.",
+      rating: 5
+    },
+    {
+      name: "Roberto Alves",
+      company: "Alves Construções",
+      text: "Profissionais extremamente competentes. Nossa empresa se desenvolveu muito com o suporte da Trevo.",
       rating: 5
     }
   ];
@@ -189,29 +217,44 @@ export function About() {
           <h3 className="text-2xl lg:text-3xl font-bold text-center text-foreground mb-12">
             O que Nossos Parceiros Dizem
           </h3>
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index}>
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
-                  <p className="text-muted-foreground mb-4 leading-relaxed">
-                    "{testimonial.text}"
-                  </p>
-                  <div>
-                    <div className="font-semibold text-foreground">
-                      {testimonial.name}
-                    </div>
-                    <div className="text-sm text-muted-foreground">
-                      {testimonial.company}
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="relative">
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              plugins={[autoplayPlugin]}
+              className="w-full max-w-5xl mx-auto"
+            >
+              <CarouselContent className="-ml-2 md:-ml-4">
+                {testimonials.map((testimonial, index) => (
+                  <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                    <Card className="h-full">
+                      <CardContent className="p-6 h-full flex flex-col">
+                        <div className="flex items-center mb-4">
+                          {[...Array(testimonial.rating)].map((_, i) => (
+                            <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                          ))}
+                        </div>
+                        <p className="text-muted-foreground mb-4 leading-relaxed flex-grow">
+                          "{testimonial.text}"
+                        </p>
+                        <div className="mt-auto">
+                          <div className="font-semibold text-foreground">
+                            {testimonial.name}
+                          </div>
+                          <div className="text-sm text-muted-foreground">
+                            {testimonial.company}
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="hidden md:flex" />
+              <CarouselNext className="hidden md:flex" />
+            </Carousel>
           </div>
         </div>
       </div>
