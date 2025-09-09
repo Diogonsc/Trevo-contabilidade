@@ -65,7 +65,7 @@ export const WhatsAppButton = () => {
     }
     
     const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/+5521999999999?text=${encodedMessage}`, '_blank');
+    window.open(`https://wa.me/+552135472077?text=${encodedMessage}`, '_blank');
     setShowTooltip(false);
   };
 

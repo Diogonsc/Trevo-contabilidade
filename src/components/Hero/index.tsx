@@ -34,11 +34,11 @@ export function Hero() {
 						<div className="flex flex-col sm:flex-row gap-4">
 							<div className="flex items-center text-muted-foreground">
 								<MapPin className="w-5 h-5 mr-2 text-primary" />
-								<span className="text-sm">Avenida Isabel, 15, Casa 2 - Rio de Janeiro</span>
+								<span className="text-sm">Avenida Isabel, 15, Casa 2, Rio de Janeiro, RJ</span>
 							</div>
 							<div className="flex items-center text-muted-foreground">
 								<Phone className="w-5 h-5 mr-2 text-primary" />
-								<span className="text-sm">(21) 2351-5160</span>
+								<span className="text-sm">+55 21 3547-2077</span>
 							</div>
 						</div>
 
@@ -77,7 +77,7 @@ export function Hero() {
 							<div 
 								className="absolute inset-0 bg-contain bg-top bg-no-repeat"
 								style={{
-									backgroundImage: 'url(/src/assets/cartao-trevo-hero.jpg)'
+									backgroundImage: 'url(/cartao-trevo-hero.jpg)'
 								}}
 							/>
 							{/* Gradiente linear sobreposto */}

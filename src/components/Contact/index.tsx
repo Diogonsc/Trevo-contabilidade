@@ -65,7 +65,7 @@ export function Contact() {
     {
       icon: Phone,
       title: "Telefone",
-      info: "(21) 2351-5160",
+      info: "+55 21 3547-2077",
       description: "Segunda a Sexta, 8h às 18h"
     },
     {
@@ -78,7 +78,7 @@ export function Contact() {
       icon: MapPin,
       title: "Endereço",
       info: "Avenida Isabel, 15, Casa 2",
-      description: "Rio de Janeiro - RJ"
+      description: "Rio de Janeiro, Rio de Janeiro 23515160"
     },
     {
       icon: Clock,
@@ -195,7 +195,7 @@ export function Contact() {
                     value={formData.phone}
                     onChange={handleInputChange}
                     required
-                    placeholder="(21) 99999-9999"
+                    placeholder="+55 21 3547-2077"
                   />
                 </div>
                 

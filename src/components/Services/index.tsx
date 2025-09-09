@@ -164,7 +164,7 @@ export function Services() {
                   <Button 
                     variant="default" 
                     size="sm"
-                    className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
+                    className="w-full bg-primary text-primary-foreground hover:bg-primary/90 py-3 px-4 min-h-[44px]"
                     onClick={() => handleServiceClick(service)}
                   >
                     Saiba mais

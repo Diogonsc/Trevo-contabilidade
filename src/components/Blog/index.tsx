@@ -534,7 +534,7 @@ export function Blog() {
                 <Button 
                   variant="outline" 
                   size="sm" 
-                  className="w-full border-primary text-primary hover:bg-primary/10"
+                  className="w-full border-primary text-primary hover:bg-primary/10 py-3 px-4 min-h-[44px]"
                   onClick={() => setSelectedModal(post.id)}
                 >
                   Ler Mais
