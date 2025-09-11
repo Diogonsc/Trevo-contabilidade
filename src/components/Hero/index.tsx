@@ -151,24 +151,24 @@ export function Hero() {
               className="grid grid-cols-3 gap-8 pt-8 border-t border-white/20 animate-slide-up"
               style={{ animationDelay: "1.2s" }}
             >
-              <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl py-4 px-2">
-                <div className="text-3xl font-zurich-black text-primary drop-shadow-lg">
+              <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl py-4 px-2 border border-primary">
+                <div className="text-3xl font-zurich-black text-primary drop-shadow-lg stroke-text">
                   25+
                 </div>
                 <div className="text-sm text-gray-100 font-zurich-medium uppercase font-bold">
                   Anos de Experiência
                 </div>
               </div>
-              <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl py-4 px-2">
-                <div className="text-3xl font-zurich-black text-primary drop-shadow-lg">
+              <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl py-4 px-2 border border-primary">
+                <div className="text-3xl font-zurich-black text-primary drop-shadow-lg stroke-text">
                   500+
                 </div>
                 <div className="text-sm text-gray-100 font-zurich-medium uppercase font-bold">
                   Clientes Atendidos
                 </div>
               </div>
-              <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl py-4 px-2">
-                <div className="text-3xl font-zurich-black text-primary drop-shadow-lg">
+              <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl py-4 px-2 border border-primary">
+                <div className="text-3xl font-zurich-black text-primary drop-shadow-lg stroke-text">
                   100%
                 </div>
                 <div className="text-sm text-gray-100 font-zurich-medium uppercase font-bold">
