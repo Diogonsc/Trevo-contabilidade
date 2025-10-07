@@ -37,7 +37,7 @@ export function Header() {
         behavior: 'smooth'
       });
     }
-    
+
     // Delay para permitir que a animação de fechamento seja visível
     setTimeout(() => {
       setIsOpen(false);
@@ -116,15 +116,16 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-white ">
-      <div className="w-full max-w-7xl mx-auto flex h-16 items-center justify-between px-6 lg:px-8">
-        {/* Logo */}
-        <div className="flex items-center">
-          <a 
-            href="#hero" 
+      <div className="w-full max-w-7xl mx-auto flex h-16 sm:h-20 items-center justify-between px-4 sm:px-6 lg:px-8">
+
+        {/* Logo - Mobile (à esquerda) */}
+        <div className="flex md:hidden items-center">
+          <a
+            href="#hero"
             className="flex items-center"
             onClick={(e) => handleLinkClick(e, "#hero")}
           >
-            <img src={logo} alt="Trevo Contabilidade" className="w-auto h-10" />
+            <img src={logo} alt="Trevo Contabilidade" className="w-auto h-8" />
           </a>
         </div>
 
@@ -133,34 +134,44 @@ export function Header() {
           {menuItems.map((item) => {
             const sectionId = item.href.replace('#', '');
             const isActive = activeSection === sectionId;
-            
+
             return (
               <a
                 key={item.label}
                 href={item.href}
                 onClick={(e) => handleLinkClick(e, item.href)}
-                className={`font-zurich-medium text-sm uppercase tracking-wide relative pb-1 group transition-colors cursor-pointer ${
-                  isActive 
-                    ? 'text-primary' 
-                    : 'text-muted-foreground hover:text-primary'
-                }`}
+                className={`font-zurich-bold text-sm uppercase tracking-wide relative pb-1 group transition-colors cursor-pointer ${isActive
+                  ? 'text-primary'
+                  : 'text-muted-foreground hover:text-primary'
+                  }`}
               >
                 {item.label}
-                <span className={`absolute bottom-0 left-0 h-0.5 bg-primary transition-all duration-300 ease-in-out ${
-                  isActive ? 'w-full' : 'w-0 group-hover:w-full'
-                }`}></span>
+                <span className={`absolute bottom-0 left-0 h-0.5 bg-primary transition-all duration-300 ease-in-out ${isActive ? 'w-full' : 'w-0 group-hover:w-full'
+                  }`}></span>
               </a>
             );
           })}
         </nav>
 
+        {/* Logo - Desktop (centro) */}
+        <div className="hidden md:flex items-center flex-col gap-2">
+          <a
+            href="#hero"
+            className="flex items-center"
+            onClick={(e) => handleLinkClick(e, "#hero")}
+          >
+            <img src={logo} alt="Trevo Contabilidade" className="w-auto h-10" />
+          </a>
+          <span className="text-xs text-primary font-zurich-bold">CRC/RJ 2574</span>
+        </div>
+
         {/* Mobile Menu Button */}
         <div className="md:hidden">
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
-              <Button 
-                variant="ghost" 
-                size="icon" 
+              <Button
+                variant="ghost"
+                size="icon"
                 className="text-primary hover:text-primary/80 hover:bg-primary/10 transition-all duration-300 relative group h-9 w-9 sm:h-10 sm:w-10"
                 onClick={() => setIsOpen(true)}
               >
@@ -188,7 +199,7 @@ export function Header() {
                     <img src={logo} alt="Trevo Contabilidade" className="w-auto h-8 sm:h-10" />
                   </SheetTitle>
                 </div>
-                
+
                 {/* Indicador de progresso de navegação */}
                 <div className="mt-3 sm:mt-4">
                   <div className="flex items-center justify-between text-xs text-muted-foreground mb-2">
@@ -196,10 +207,10 @@ export function Header() {
                     <span className="text-xs sm:text-sm font-zurich-medium">{navigationProgress.current} de {navigationProgress.total}</span>
                   </div>
                   <div className="w-full bg-muted/40 rounded-full h-1 sm:h-1.5">
-                    <div 
+                    <div
                       className="bg-primary h-1 sm:h-1.5 rounded-full transition-all duration-500 ease-out"
-                      style={{ 
-                        width: `${navigationProgress.percentage}%` 
+                      style={{
+                        width: `${navigationProgress.percentage}%`
                       }}
                     />
                   </div>
@@ -213,29 +224,27 @@ export function Header() {
                     const sectionId = item.href.replace('#', '');
                     const isActive = activeSection === sectionId;
                     const IconComponent = item.icon;
-                    
+
                     return (
                       <a
                         key={item.label}
                         href={item.href}
                         onClick={(e) => handleLinkClick(e, item.href)}
-                        className={`group flex items-center w-full text-left px-3 sm:px-4 py-3 sm:py-4 font-zurich-medium text-sm sm:text-base relative transition-all duration-300 cursor-pointer rounded-lg sm:rounded-xl mx-1 sm:mx-2 ${
-                          isActive 
-                            ? 'text-primary bg-primary/15 border border-primary/30 shadow-md' 
-                            : 'text-foreground hover:bg-primary/8 hover:text-primary hover:shadow-sm'
-                        }`}
-                        style={{ 
+                        className={`group flex items-center w-full text-left px-3 sm:px-4 py-3 sm:py-4 font-zurich-medium text-sm sm:text-base relative transition-all duration-300 cursor-pointer rounded-lg sm:rounded-xl mx-1 sm:mx-2 ${isActive
+                          ? 'text-primary bg-primary/15 border border-primary/30 shadow-md'
+                          : 'text-foreground hover:bg-primary/8 hover:text-primary hover:shadow-sm'
+                          }`}
+                        style={{
                           animationDelay: `${index * 50}ms`,
                           animation: isOpen ? 'slideInRight 0.3s ease-out forwards' : 'none'
                         }}
                         aria-label={`Navegar para ${item.label}`}
                         role="menuitem"
                       >
-                        <div className={`flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl mr-3 sm:mr-4 transition-all duration-300 ${
-                          isActive 
-                            ? 'bg-primary/25 text-primary shadow-sm' 
-                            : 'bg-muted/60 text-muted-foreground group-hover:bg-primary/20 group-hover:text-primary group-hover:shadow-sm'
-                        }`}>
+                        <div className={`flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl mr-3 sm:mr-4 transition-all duration-300 ${isActive
+                          ? 'bg-primary/25 text-primary shadow-sm'
+                          : 'bg-muted/60 text-muted-foreground group-hover:bg-primary/20 group-hover:text-primary group-hover:shadow-sm'
+                          }`}>
                           <IconComponent className="h-4 w-4 sm:h-5 sm:w-5" />
                         </div>
                         <div className="flex-1 min-w-0">
@@ -250,9 +259,8 @@ export function Header() {
                           {isActive && (
                             <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-primary rounded-full animate-pulse mr-1.5 sm:mr-2"></div>
                           )}
-                          <ChevronRight className={`h-3.5 w-3.5 sm:h-4 sm:w-4 transition-all duration-300 ${
-                            isActive ? 'text-primary' : 'text-muted-foreground group-hover:text-primary'
-                          }`} />
+                          <ChevronRight className={`h-3.5 w-3.5 sm:h-4 sm:w-4 transition-all duration-300 ${isActive ? 'text-primary' : 'text-muted-foreground group-hover:text-primary'
+                            }`} />
                         </div>
                       </a>
                     );
@@ -267,7 +275,7 @@ export function Header() {
                       Entre em Contato
                     </h3>
                     <div className="space-y-2 sm:space-y-3">
-                      <a 
+                      <a
                         href="tel:+552135472077"
                         className="flex items-center text-xs sm:text-sm text-foreground hover:text-primary transition-all duration-200 cursor-pointer group p-1.5 sm:p-2 rounded-lg hover:bg-primary/8"
                       >
@@ -276,7 +284,7 @@ export function Header() {
                         </div>
                         <span className="font-zurich-regular truncate">+55 21 3547-2077</span>
                       </a>
-                      <a 
+                      <a
                         href="mailto:contato@trevocontabilidade.com"
                         className="flex items-center text-xs sm:text-sm text-foreground hover:text-primary transition-all duration-200 cursor-pointer group p-1.5 sm:p-2 rounded-lg hover:bg-primary/8"
                       >

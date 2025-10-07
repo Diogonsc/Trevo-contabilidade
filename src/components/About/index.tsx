@@ -9,15 +9,17 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import { 
-  Award, 
-  Users, 
-  Target, 
+import {
+  Award,
+  Users,
+  Target,
   Heart,
   Coffee,
   ArrowRight,
-  Star
+  Star,
 } from "lucide-react";
+import soraiaImg from "@/assets/soraia.png";
+import rafaelImg from "@/assets/rafael.png";
 
 export function About() {
   const autoplayPlugin = Autoplay({ delay: 4000, stopOnInteraction: true });
@@ -26,69 +28,84 @@ export function About() {
     {
       icon: Heart,
       title: "Parceria",
-      description: "Mais que cliente, temos parceiros de sucesso. Construímos relacionamentos duradouros baseados na confiança."
+      description:
+        "Mais do que clientes, temos parceiros de sucesso: você cresce, nós crescemos juntos.",
     },
     {
       icon: Target,
       title: "Excelência",
-      description: "25+ anos de experiência garantem serviços de alta qualidade e resultados excepcionais para nossos clientes."
+      description:
+        "+ 30 anos de experiência garantindo serviços contábeis de alta qualidade, conquistando resultados excepcionais com nossos clientes.",
     },
     {
       icon: Users,
       title: "Proximidade",
-      description: "Atendimento personalizado e próximo, sempre disponível para orientar e apoiar o crescimento do seu negócio."
+      description:
+        "Atendimento personalizado, sempre pronto para te orientar e apoiar o crescimento do seu negócio.",
     },
     {
       icon: Award,
       title: "Confiança",
-      description: "Transparência e ética em todos os nossos processos, garantindo a segurança e tranquilidade dos nossos parceiros."
-    }
+      description:
+        "Prezamos pela transparência e ética em todos os nossos processos, garantindo a segurança e tranquilidade da sua empresa.",
+    },
   ];
 
   const achievements = [
-    { number: "25+", label: "Anos de Experiência" },
+    { number: "30+", label: "Anos de Experiência" },
     { number: "500+", label: "Empresas Atendidas" },
     { number: "100%", label: "Clientes Satisfeitos" },
-    { number: "24/7", label: "Suporte Disponível" }
+    { number: "24/7", label: "Suporte Disponível" },
   ];
 
   const testimonials = [
     {
-      name: "Maria Silva",
-      company: "Silva & Associados",
-      text: "A Trevo transformou nossa contabilidade. Profissionais competentes e sempre disponíveis para nos orientar.",
-      rating: 5
+      name: "Claudia Cristina",
+      date: "Há 2 semanas",
+      text: "Empresa nota 10. Contadores são muito responsáveis e confiáveis. Tem a minha admiração. Há anos que fazem meu imposto de renda e minha contabilidade com funcionários. Serviço de contabilidade top.",
+      rating: 5,
     },
     {
-      name: "João Santos",
-      company: "Santos Comércio",
-      text: "Parceria de mais de 10 anos. Recomendo a todos que buscam excelência em serviços contábeis.",
-      rating: 5
+      name: "Alexandre Botelho",
+      date: "Há 3 dias",
+      text: "Gostaria de parabenizar o escritório de contabilidade TREVO CONTABILIDADE, pelo excelente trabalho que realiza. A dedicação, o profissionalismo e o comprometimento da equipe fazem toda a diferença, especialmente em periodos mais delicados, como a época do Imposto de Renda.",
+      rating: 5,
     },
     {
-      name: "Ana Costa",
-      company: "Costa Consultoria",
-      text: "Atendimento excepcional e conhecimento técnico impecável. Nossa empresa cresceu muito com o apoio da Trevo.",
-      rating: 5
+      name: "José Carlos",
+      date: "7 dias",
+      text: "Profissioanis de excelência. super indico.",
+      rating: 5,
     },
     {
-      name: "Carlos Mendes",
-      company: "Mendes Tecnologia",
-      text: "Serviços contábeis de primeira qualidade. A Trevo nos ajudou a organizar toda nossa estrutura fiscal.",
-      rating: 5
+      name: "Fagner Câmara",
+      date: "Há 2 semanas",
+      text: "Excelente serviço e suporte contábil. Profissioanis atenciosos, pacientes e empáticos. Atualizados e competentes.",
+      rating: 5,
     },
     {
-      name: "Fernanda Lima",
-      company: "Lima Advocacia",
-      text: "Parceria sólida e confiável. Sempre que precisamos de orientação contábil, a Trevo está pronta para ajudar.",
-      rating: 5
+      name: "Patricia Reginatto",
+      date: "Há 2 semanas",
+      text: "Comprometimento, profissionalismo e eficiência são a marca da empresa.",
+      rating: 5,
+    },
+  ];
+
+  const team = [
+    {
+      name: "Soraia",
+      image: soraiaImg,
+      role: "Nossa especialista em obrigações fiscais",
+      description:
+        "Ela vai te ajudar com o cálculo do Simples Nacional, emissão de nota fiscal, declarações acessórias e muito mais.",
     },
     {
-      name: "Roberto Alves",
-      company: "Alves Construções",
-      text: "Profissionais extremamente competentes. Nossa empresa se desenvolveu muito com o suporte da Trevo.",
-      rating: 5
-    }
+      name: "Rafael",
+      image: rafaelImg,
+      role: "Expert em Departamento Pessoal",
+      description:
+        "Conte com ele para processos de admissão e demissão, folha de pagamento, FGTS, 13º salário, entre outros.",
+    },
   ];
 
   return (
@@ -96,20 +113,23 @@ export function About() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <Badge variant="secondary" className="inline-flex items-center px-4 py-2 bg-primary/10 text-primary hover:bg-primary/20 mb-4">
+          <Badge
+            variant="secondary"
+            className="inline-flex items-center px-4 py-2 bg-primary/10 text-primary hover:bg-primary/20 mb-4"
+          >
             <Coffee className="w-4 h-4 mr-2" />
             Sobre a Trevo
           </Badge>
-          
+
           <h2 className="text-3xl lg:text-5xl font-zurich-bold text-foreground mb-6">
             Mais que cliente, temos{" "}
             <span className="text-primary">parceiros de sucesso</span>
           </h2>
-          
+
           <p className="text-xl font-zurich-regular text-muted-foreground max-w-3xl mx-auto">
-            Com mais de 25 anos de história, a Trevo Contabilidade se consolidou como 
-            referência em serviços contábeis, sempre priorizando a parceria e o crescimento 
-            dos nossos clientes.
+            Com mais de 30 anos de história, a Trevo Contabilidade se consolidou
+            como referência na Zona Oeste do Rio, sempre priorizando a parceria
+            e o crescimento dos nossos clientes.
           </p>
         </div>
 
@@ -122,14 +142,16 @@ export function About() {
                 Nossa História
               </h3>
               <p className="font-zurich-regular text-muted-foreground leading-relaxed">
-                Fundada em 1998, a Trevo Contabilidade nasceu com o propósito de oferecer 
-                serviços contábeis de excelência, sempre com foco no relacionamento próximo 
-                e na parceria com nossos clientes.
+                Fundada em 1995, no bairro de Santa Cruz, no Rio de Janeiro, a
+                Trevo Contabilidade nasceu com o propósito de oferecer serviços
+                contábeis de excelência, sempre com foco no relacionamento
+                próximo e na parceria com nossos clientes.
               </p>
               <p className="font-zurich-regular text-muted-foreground leading-relaxed">
-                Ao longo desses 25+ anos, acompanhamos o crescimento de centenas de empresas, 
-                desde microempreendedores até grandes corporações, sempre adaptando nossos 
-                serviços às necessidades específicas de cada negócio.
+                Ao longo desses mais de 30 anos, acompanhamos o crescimento de
+                centenas de empresas, desde microempreendedores até grandes
+                negócios, sempre adaptando nossos serviços às necessidades
+                específicas de cada empresário(a).
               </p>
             </div>
 
@@ -138,12 +160,22 @@ export function About() {
                 Nossa Missão
               </h4>
               <p className="font-zurich-regular text-muted-foreground">
-                Proporcionar soluções contábeis inovadoras e personalizadas, 
-                contribuindo para o sucesso e crescimento sustentável dos nossos parceiros.
+                Proporcionar soluções contábeis inovadoras e personalizadas,
+                contribuindo para o sucesso e crescimento sustentável dos nossos
+                parceiros.
               </p>
             </div>
 
-            <Button size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground uppercase font-zurich-bold tracking-wider">
+            <Button
+              size="lg"
+              className="w-full bg-primary hover:bg-primary/90 text-primary-foreground uppercase font-zurich-bold tracking-wider"
+              onClick={() => {
+                document.getElementById("team-section")?.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              }}
+            >
               Conhecer Nossa Equipe
               <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
@@ -158,12 +190,14 @@ export function About() {
                     <Coffee className="w-12 h-12 text-primary" />
                   </div>
                   <h4 className="text-xl font-zurich-bold text-foreground">
-                    Pega seu café e deixe a contabilidade com a gente!
+                    Pega um cafezinho e deixe a contabilidade com a gente!
                   </h4>
                   <p className="font-zurich-regular text-muted-foreground">
-                    Nosso compromisso é simplificar a gestão contábil da sua empresa, 
-                    permitindo que você se concentre no que realmente importa: 
-                    fazer seu negócio crescer.
+                    Nosso compromisso é simplificar a gestão contábil da sua
+                    empresa, permitindo que você se concentre no que realmente
+                    importa: o crescimento do seu negócio. Priorizamos entender
+                    suas necessidades para elaborar um trabalho personalizado
+                    que faça sentido para seus objetivos.
                   </p>
                 </div>
               </CardContent>
@@ -213,7 +247,7 @@ export function About() {
         </div>
 
         {/* Testimonials */}
-        <div>
+        <div className="mb-20">
           <h3 className="text-2xl lg:text-3xl font-zurich-bold text-center text-foreground mb-12">
             O que Nossos Parceiros Dizem
           </h3>
@@ -228,12 +262,18 @@ export function About() {
             >
               <CarouselContent className="-ml-2 md:-ml-4">
                 {testimonials.map((testimonial, index) => (
-                  <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                  <CarouselItem
+                    key={index}
+                    className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3"
+                  >
                     <Card className="h-full">
                       <CardContent className="p-6 h-full flex flex-col">
                         <div className="flex items-center mb-4">
                           {[...Array(testimonial.rating)].map((_, i) => (
-                            <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                            <Star
+                              key={i}
+                              className="w-4 h-4 text-yellow-400 fill-current"
+                            />
                           ))}
                         </div>
                         <p className="font-zurich-regular text-muted-foreground mb-4 leading-relaxed flex-grow">
@@ -244,7 +284,7 @@ export function About() {
                             {testimonial.name}
                           </div>
                           <div className="text-sm font-zurich-regular text-muted-foreground">
-                            {testimonial.company}
+                            {testimonial.date}
                           </div>
                         </div>
                       </CardContent>
@@ -255,6 +295,44 @@ export function About() {
               <CarouselPrevious className="hidden md:flex" />
               <CarouselNext className="hidden md:flex" />
             </Carousel>
+          </div>
+        </div>
+
+        {/* Team Section */}
+        <div id="team-section" className="scroll-mt-20">
+          <h3 className="text-2xl lg:text-3xl font-zurich-bold text-center text-foreground mb-12">
+            Nossa Equipe
+          </h3>
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {team.map((member, index) => (
+              <Card
+                key={index}
+                className="relative overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-[600px]"
+              >
+                {/* Imagem de fundo ocupando todo o card */}
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+
+                {/* Overlay com gradiente para melhor legibilidade */}
+                <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/50 to-black/90" />
+
+                {/* Conteúdo sobreposto */}
+                <div className="relative h-full flex flex-col justify-end p-8 text-center space-y-4">
+                  <h4 className="text-3xl font-zurich-bold text-white">
+                    {member.name}
+                  </h4>
+                  <p className="text-xl font-zurich-bold text-primary">
+                    {member.role}
+                  </p>
+                  <p className="font-zurich-regular text-white/90 leading-relaxed">
+                    {member.description}
+                  </p>
+                </div>
+              </Card>
+            ))}
           </div>
         </div>
       </div>

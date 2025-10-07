@@ -34,59 +34,71 @@ export function Hero() {
       {/* Subtle Grid Pattern Overlay */}
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-24">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-8">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           {/* Conteúdo Principal */}
-          <div className="space-y-8 animate-fade-in">
-            <div className="space-y-6">
+          <div className="space-y-6 sm:space-y-8 animate-fade-in">
+            <div className="space-y-4 sm:space-y-6">
               <Badge
                 variant="secondary"
-                className="inline-flex items-center px-4 py-2 bg-primary/20 text-primary-foreground border-2 border-primary hover:bg-primary/30 backdrop-blur-sm animate-slide-up"
+                className="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 bg-primary/20 text-primary-foreground border-2 border-primary hover:bg-primary/30 backdrop-blur-sm animate-slide-up text-xs sm:text-sm"
               >
-                <Coffee className="w-4 h-4 mr-2" />
-                🍀 + 25 anos de história
+                <Coffee className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" />
+                🍀 + 30 anos de história
               </Badge>
 
               <h1
-                className="text-5xl lg:text-6xl font-zurich-bold text-white leading-tight animate-slide-up"
+                className="text-4xl sm:text-5xl lg:text-5xl font-zurich-bold text-white leading-tight animate-slide-up"
                 style={{ animationDelay: "0.2s" }}
               >
-                Mais que cliente, temos{" "}
+                Muito mais que um{" "}
                 <span className="text-primary drop-shadow-lg stroke-text">
-                  parceiros de sucesso
+                  escritório de contabilidade,
+                </span>
+                {" "}
+                <span className="text-white">
+                  somos o parceiro certo para fazer sua
+                </span>
+                {" "}
+                <span className="text-primary drop-shadow-lg stroke-text">
+                  empresa
+                </span>
+                {" "}
+                <span className="text-white">
+                  decolar.
                 </span>
               </h1>
 
               <p
-                className="text-xl text-gray-100 font-zurich-regular leading-relaxed max-w-2xl animate-slide-up"
+                className="text-lg sm:text-lg lg:text-xl text-gray-100 font-zurich-regular leading-relaxed max-w-2xl animate-slide-up"
                 style={{ animationDelay: "0.4s" }}
               >
-                Pega seu café e deixe a contabilidade com a gente! Oferecemos
-                serviços completos de contabilidade para transformar seu negócio
-                em uma parceria de sucesso.
+                Pega um cafezinho e deixe a contabilidade com a gente!
+                Oferecemos serviços contábeis completos para você focar no
+                crescimento do seu negócio.
               </p>
             </div>
 
             {/* Trust Indicators */}
             <div
-              className="flex flex-wrap gap-4 animate-slide-up"
+              className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 animate-slide-up"
               style={{ animationDelay: "0.6s" }}
             >
-              <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
-                <Star className="w-4 h-4 mr-2 text-yellow-400 fill-current" />
-                <span className="text-sm font-zurich-bold text-white">
+              <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-full px-3 sm:px-4 py-2">
+                <Star className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1.5 sm:mr-2 text-yellow-400 fill-current flex-shrink-0" />
+                <span className="text-sm sm:text-sm font-zurich-bold text-white whitespace-nowrap">
                   4.9/5 Avaliação
                 </span>
               </div>
-              <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
-                <Award className="w-4 h-4 mr-2 text-primary" />
-                <span className="text-sm font-zurich-bold text-white">
+              <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-full px-3 sm:px-4 py-2">
+                <Award className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1.5 sm:mr-2 text-green-400 flex-shrink-0" />
+                <span className="text-sm sm:text-sm font-zurich-bold text-white whitespace-nowrap">
                   Certificado CRC
                 </span>
               </div>
-              <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
-                <CheckCircle className="w-4 h-4 mr-2 text-green-400" />
-                <span className="text-sm font-zurich-bold text-white">
+              <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-full px-3 sm:px-4 py-2">
+                <CheckCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1.5 sm:mr-2 text-green-400 flex-shrink-0" />
+                <span className="text-sm sm:text-sm font-zurich-bold text-white whitespace-nowrap">
                   100% Seguro
                 </span>
               </div>
@@ -94,18 +106,18 @@ export function Hero() {
 
             {/* Informações de Contato */}
             <div
-              className="flex flex-col sm:flex-row gap-4 animate-slide-up"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-slide-up"
               style={{ animationDelay: "0.8s" }}
             >
-              <div className="flex items-center text-gray-100">
-                <MapPin className="w-5 h-5 mr-2 text-primary" />
-                <span className="text-sm font-zurich-regular">
+              <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-full px-3 sm:px-4 py-2">
+                <MapPin className="w-4 h-4 sm:w-5 sm:h-5 mr-2 text-green-400 flex-shrink-0" />
+                <span className="text-lg sm:text-sm font-zurich-bold text-white">
                   Avenida Isabel, 15, Casa 2, Rio de Janeiro, RJ
                 </span>
               </div>
-              <div className="flex items-center text-gray-100">
-                <Phone className="w-5 h-5 mr-2 text-primary" />
-                <span className="text-sm font-zurich-regular">
+              <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-full px-3 sm:px-4 py-2">
+                <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2 text-green-400 flex-shrink-0" />
+                <span className="text-lg sm:text-sm font-zurich-bold text-white">
                   +55 21 3547-2077
                 </span>
               </div>
@@ -113,12 +125,12 @@ export function Hero() {
 
             {/* CTAs */}
             <div
-              className="flex flex-col sm:flex-row gap-4 animate-slide-up"
+              className="flex flex-col sm:flex-row gap-6 sm:gap-4 animate-slide-up"
               style={{ animationDelay: "1s" }}
             >
               <Button
                 size="lg"
-                className="p-6 bg-primary hover:bg-primary/90 text-white font-zurich-bold uppercase cursor-pointer tracking-wider shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                className="p-6 sm:px-6 sm:py-6 border-2 border-primary bg-primary hover:bg-primary/90 text-white font-zurich-bold uppercase cursor-pointer tracking-wider shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-sm sm:text-sm"
                 onClick={() => {
                   window.open(
                     "https://api.whatsapp.com/send?phone=552135472077&text=Olá, gostaria de solicitar um orçamento",
@@ -126,12 +138,13 @@ export function Hero() {
                   );
                 }}
               >
-                Solicitar Orçamento
+                <span className="hidden sm:inline">Chama a Trevo! Estamos prontos para ajudar seu negócio.</span>
+                <span className="sm:hidden">Fale com a Trevo agora</span>
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
               <Button
                 size="lg"
-                className="p-6 border-2 border-white bg-transparent text-white font-zurich-bold hover:bg-white/10 uppercase tracking-wider cursor-pointer backdrop-blur-sm transition-all duration-300 transform hover:scale-105"
+                className="p-6 sm:px-6 sm:py-6 border-2 border-white bg-transparent text-white font-zurich-bold hover:bg-white/10 uppercase tracking-wider cursor-pointer backdrop-blur-sm transition-all duration-300 transform hover:scale-105 text-sm sm:text-sm"
                 onClick={() => {
                   const servicosSection = document.getElementById("servicos");
                   if (servicosSection) {
@@ -147,24 +160,24 @@ export function Hero() {
             </div>
 
             {/* Estatísticas */}
-            <div
+            {/* <div
               className="grid grid-cols-3 gap-8 pt-8 border-t border-white/20 animate-slide-up"
               style={{ animationDelay: "1.2s" }}
             >
               <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl py-4 px-2 border border-primary">
                 <div className="text-3xl font-zurich-black text-primary drop-shadow-lg stroke-text">
-                  25+
+                  5.0/5.0
                 </div>
                 <div className="text-sm text-gray-100 font-zurich-medium uppercase font-bold">
-                  Anos de Experiência
+                  Nas avaliações Google
                 </div>
               </div>
               <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl py-4 px-2 border border-primary">
                 <div className="text-3xl font-zurich-black text-primary drop-shadow-lg stroke-text">
-                  500+
+                  CRC
                 </div>
                 <div className="text-sm text-gray-100 font-zurich-medium uppercase font-bold">
-                  Clientes Atendidos
+                  Certificado
                 </div>
               </div>
               <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl py-4 px-2 border border-primary">
@@ -172,10 +185,10 @@ export function Hero() {
                   100%
                 </div>
                 <div className="text-sm text-gray-100 font-zurich-medium uppercase font-bold">
-                  Satisfação
+                  Seguro e confiável
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Coluna Direita - Elementos Visuais */}
@@ -194,39 +207,42 @@ export function Hero() {
                     Clientes Satisfeitos
                   </h3>
                   <p className="text-gray-200 text-sm">
-                    Mais de 500 empresas confiam na gente
+                    já confiaram suas finanças à Trevo.
                   </p>
                 </div>
               </div>
               <div className="space-y-3">
                 <div className="flex items-center text-gray-200">
                   <CheckCircle className="w-4 h-4 mr-2 text-green-400" />
-                  <span className="text-sm">Contabilidade completa</span>
+                  <span className="text-sm">Contabilidade do início ao fim;
+                  </span>
                 </div>
                 <div className="flex items-center text-gray-200">
                   <CheckCircle className="w-4 h-4 mr-2 text-green-400" />
-                  <span className="text-sm">Suporte especializado</span>
+                  <span className="text-sm">Orientação personalizada;
+                  </span>
                 </div>
                 <div className="flex items-center text-gray-200">
                   <CheckCircle className="w-4 h-4 mr-2 text-green-400" />
-                  <span className="text-sm">Tecnologia de ponta</span>
+                  <span className="text-sm">Atendimento humanizado.</span>
                 </div>
               </div>
             </div>
 
             {/* Card de Contato Rápido */}
             <div className="bg-primary/20 backdrop-blur-md rounded-2xl p-6 border border-primary shadow-2xl">
-              <h3 className="text-lg font-zurich-bold text-white mb-4">
-                Fale Conosco Agora
+              <h3 className="text-xl font-zurich-bold text-white mb-4">
+                30 anos de experiência
               </h3>
               <div className="space-y-3">
                 <div className="flex items-center text-gray-100">
-                  <Phone className="w-4 h-4 mr-2 text-primary" />
-                  <span className="text-sm">+55 21 3547-2077</span>
+                  <Phone className="w-4 h-4 mr-2 text-green-400" />
+                  <span className="text-sm">+500 clientes atendidos | 100% de satisfação</span>
                 </div>
                 <div className="flex items-center text-gray-100">
-                  <MapPin className="w-4 h-4 mr-2 text-primary" />
-                  <span className="text-sm">Rio de Janeiro, RJ</span>
+                  <MapPin className="w-4 h-4 mr-2 text-green-400" />
+                  <span className="text-sm">Atendemos empresas de todo o Brasil
+                  </span>
                 </div>
               </div>
               <Button

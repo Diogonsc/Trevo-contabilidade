@@ -1,28 +1,21 @@
-import { 
-  Dialog, 
-  DialogContent, 
-  DialogHeader, 
-  DialogTitle, 
-  DialogDescription 
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { 
-  Calculator, 
-  TrendingUp, 
-  Shield, 
-  Users, 
+import {
+  Calculator,
+  Users,
   CheckCircle,
   ArrowRight,
   Clock as ClockIcon,
   DollarSign,
   Target,
   Award,
-  Building2,
-  UserCheck,
-  Receipt,
-  Home,
-  FileCheck,
-  Briefcase
+  Building2
 } from "lucide-react";
 
 interface ServiceModalProps {
@@ -38,211 +31,71 @@ interface ServiceModalProps {
 }
 
 const serviceDetails = {
-  "Abertura e Legalização de Empresas": {
+  "Contabilidade Geral": {
     icon: Building2,
-    detailedDescription: "Processo completo e especializado para abertura da sua empresa. Nossa equipe cuida de toda a burocracia, desde a escolha do regime tributário até o registro final, garantindo que tudo seja feito corretamente e no menor tempo possível.",
+    detailedDescription: "Soluções completas para formalização e gestão legal do seu negócio. Nossa equipe especializada cuida de toda a burocracia necessária para que sua empresa opere de forma regular e em conformidade com todas as exigências legais.",
     benefits: [
-      "Análise personalizada do regime tributário",
-      "Documentação completa e organizada",
-      "Registro em todos os órgãos competentes",
-      "Orientação pós-abertura por 30 dias",
-      "Suporte para primeiras obrigações",
-      "Consultoria sobre estrutura societária"
+      "Processo completo de legalização",
+      "Documentação organizada e atualizada",
+      "Suporte para alterações contratuais",
+      "Consultoria sobre estrutura empresarial",
+      "Acompanhamento em todos os órgãos",
+      "Orientação pós-abertura especializada"
     ],
     process: [
       "Consulta inicial e análise",
-      "Definição do regime tributário",
-      "Preparação da documentação",
+      "Preparação da documentação necessária",
       "Protocolo nos órgãos competentes",
       "Acompanhamento do processo",
-      "Entrega da empresa pronta"
+      "Emissão de documentos fiscais",
+      "Entrega completa da documentação"
     ],
   },
-  "MEI - Micro Empreendedor Individual": {
-    icon: UserCheck,
-    detailedDescription: "Especialistas em formalização de MEI com suporte completo para microempreendedores. Facilitamos todo o processo de abertura e oferecemos orientação contínua para que você possa focar no que realmente importa: seu negócio.",
-    benefits: [
-      "Abertura rápida e descomplicada",
-      "Orientação tributária especializada",
-      "Suporte para declarações anuais",
-      "Consultoria sobre enquadramento",
-      "Atualização sobre mudanças na legislação",
-      "Suporte contínuo personalizado"
-    ],
-    process: [
-      "Análise da atividade exercida",
-      "Verificação de enquadramento",
-      "Preparação da documentação",
-      "Protocolo na Receita Federal",
-      "Acompanhamento da aprovação",
-      "Orientação pós-abertura"
-    ],
-  },
-  "Contabilidade Geral": {
-    icon: Calculator,
-    detailedDescription: "Nossa contabilidade geral oferece uma gestão completa e precisa de todos os aspectos financeiros da sua empresa. Com anos de experiência no mercado, garantimos que sua empresa esteja sempre em conformidade com as normas contábeis vigentes.",
-    benefits: [
-      "Relatórios financeiros precisos e atualizados",
-      "Controle total do fluxo de caixa",
-      "Análise de performance financeira",
-      "Suporte especializado 24/7",
-      "Integração com sistemas de gestão",
-      "Backup seguro de todos os dados"
-    ],
-    process: [
-      "Análise inicial da empresa",
-      "Configuração do sistema contábil",
-      "Implementação dos processos",
-      "Treinamento da equipe",
-      "Acompanhamento mensal",
-      "Relatórios personalizados"
-    ],
-  },
-  "Consultoria Financeira": {
-    icon: Briefcase,
-    detailedDescription: "Orientação estratégica especializada para o crescimento e desenvolvimento do seu negócio. Nossa consultoria vai além dos números, oferecendo insights valiosos para tomada de decisões estratégicas e crescimento sustentável.",
-    benefits: [
-      "Análise estratégica completa",
-      "Planejamento de crescimento",
-      "Indicadores de performance",
-      "Mentoria empresarial",
-      "Análise de mercado",
-      "Suporte em decisões estratégicas"
-    ],
-    process: [
-      "Diagnóstico empresarial",
-      "Análise de mercado",
-      "Desenvolvimento de estratégias",
-      "Implementação de melhorias",
-      "Acompanhamento de resultados",
-      "Ajustes estratégicos"
-    ],
-  },
-  "Serviços de Compliance": {
-    icon: Shield,
-    detailedDescription: "Garantia total de conformidade com todas as obrigações fiscais, trabalhistas e regulamentares. Nossa equipe especializada mantém sua empresa sempre em dia com as obrigações, evitando multas e problemas com órgãos reguladores.",
-    benefits: [
-      "Cumprimento de todas as obrigações",
-      "Evita multas e penalidades",
-      "Auditoria interna regular",
-      "Consultoria especializada",
-      "Atualização constante da legislação",
-      "Suporte em fiscalizações"
-    ],
-    process: [
-      "Auditoria inicial",
-      "Identificação de gaps",
-      "Implementação de melhorias",
-      "Treinamento da equipe",
-      "Monitoramento contínuo",
-      "Relatórios de compliance"
-    ],
-  },
-  "Folha de Pagamento": {
+  "Departamento Pessoal": {
     icon: Users,
-    detailedDescription: "Gestão completa e especializada da folha de pagamento e todas as obrigações trabalhistas. Nossa equipe cuida de todos os aspectos do RH, garantindo que seus funcionários sejam tratados com excelência e que todas as obrigações sejam cumpridas.",
+    detailedDescription: "Gestão completa de recursos humanos e obrigações trabalhistas. Nossa equipe cuida de todos os aspectos do departamento pessoal, garantindo conformidade com a legislação trabalhista e excelência no atendimento aos seus colaboradores.",
     benefits: [
-      "Folha de pagamento precisa",
-      "Gestão de admissões e demissões",
-      "Cálculo correto de encargos",
-      "Controle de férias e 13º",
-      "Relatórios gerenciais",
+      "Gestão eficiente de funcionários",
+      "Cálculos precisos de rescisão",
+      "Processamento de folha de pagamento",
+      "Envio de obrigações acessórias",
+      "Controle de benefícios e encargos",
       "Suporte em auditorias trabalhistas"
     ],
     process: [
-      "Análise da estrutura atual",
-      "Configuração do sistema",
-      "Implementação dos processos",
-      "Treinamento da equipe",
-      "Processamento mensal",
-      "Relatórios e análises"
+      "Análise da estrutura de RH",
+      "Configuração do sistema de folha",
+      "Processamento de admissões",
+      "Cálculo e envio de encargos",
+      "Geração de guias e relatórios",
+      "Acompanhamento mensal"
     ],
   },
-  "Planejamento Tributário": {
-    icon: TrendingUp,
-    detailedDescription: "Estratégias inteligentes para otimizar a carga tributária da sua empresa. Nossa equipe especializada desenvolve planos personalizados que podem resultar em economia significativa de impostos, sempre dentro da legalidade.",
+  "Assessoria Fiscal e Tributária": {
+    icon: Calculator,
+    detailedDescription: "Planejamento e regularização fiscal para sua empresa e pessoa física. Nossa equipe especializada garante que você esteja em dia com todas as obrigações fiscais, otimizando sua carga tributária de forma legal e segura.",
     benefits: [
-      "Redução legal da carga tributária",
-      "Análise de diferentes regimes",
-      "Simulações detalhadas",
-      "Estratégias personalizadas",
-      "Acompanhamento mensal",
-      "Consultoria especializada"
+      "Regularização de documentos fiscais",
+      "Declaração de imposto de renda completa",
+      "Apuração correta de impostos",
+      "Envio de declarações obrigatórias",
+      "Planejamento tributário estratégico",
+      "Suporte especializado contínuo"
     ],
     process: [
-      "Análise da situação atual",
-      "Estudo de alternativas",
-      "Desenvolvimento da estratégia",
-      "Implementação do plano",
-      "Monitoramento contínuo",
-      "Ajustes quando necessário"
-    ],
-  },
-  "Imposto de Renda (PF e PJ)": {
-    icon: Receipt,
-    detailedDescription: "Preparação completa do Imposto de Renda para pessoas físicas e jurídicas com máxima economia. Nossa equipe especializada garante que você pague apenas o que é devido, aproveitando todas as deduções e benefícios disponíveis.",
-    benefits: [
-      "Declaração de IRPF completa",
-      "Declaração de IRPJ otimizada",
-      "Planejamento fiscal anual",
-      "Orientação sobre deduções",
-      "Suporte em fiscalizações",
-      "Consultoria especializada"
-    ],
-    process: [
-      "Análise da documentação",
-      "Identificação de deduções",
-      "Preparação da declaração",
-      "Revisão e validação",
-      "Transmissão à Receita",
-      "Acompanhamento pós-entrega"
-    ],
-  },
-  "Engenharia - Legalização de Imóveis": {
-    icon: Home,
-    detailedDescription: "Serviços especializados em legalização de imóveis residenciais e comerciais. Nossa equipe de engenheiros cuida de todo o processo de regularização, desde a análise técnica até a aprovação final nos órgãos competentes.",
-    benefits: [
-      "Regularização completa de imóveis",
-      "Emissão de Habite-se",
-      "Projetos arquitetônicos",
-      "Aprovação em órgãos competentes",
-      "Consultoria técnica especializada",
-      "Acompanhamento do processo"
-    ],
-    process: [
-      "Análise técnica do imóvel",
-      "Elaboração de projetos",
-      "Protocolo nos órgãos",
-      "Acompanhamento de vistorias",
-      "Correções necessárias",
-      "Aprovação final"
-    ],
-  },
-  "Regularização de CPF": {
-    icon: FileCheck,
-    detailedDescription: "Regularização completa de CPF junto à Receita Federal com agilidade e segurança. Nossa equipe especializada resolve pendências e regulariza sua situação fiscal de forma rápida e eficiente.",
-    benefits: [
-      "Análise completa da situação",
-      "Documentação necessária",
-      "Protocolo na Receita Federal",
-      "Acompanhamento do processo",
-      "Suporte especializado",
-      "Resolução rápida de pendências"
-    ],
-    process: [
-      "Análise da situação atual",
+      "Análise da situação fiscal atual",
       "Identificação de pendências",
-      "Preparação da documentação",
-      "Protocolo na Receita",
-      "Acompanhamento do processo",
-      "Regularização final"
+      "Planejamento de regularização",
+      "Preparação de declarações",
+      "Apuração e envio de impostos",
+      "Acompanhamento e orientação"
     ],
   }
 };
 
 export function ServiceModal({ isOpen, onClose, service }: ServiceModalProps) {
   const details = serviceDetails[service.title as keyof typeof serviceDetails];
-  
+
   if (!details) return null;
 
   return (
@@ -340,16 +193,16 @@ export function ServiceModal({ isOpen, onClose, service }: ServiceModalProps) {
         {/* Footer com CTA */}
         <div className="flex-shrink-0 pt-4 border-t">
           <div className="flex flex-col sm:flex-row gap-3">
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="flex-1 py-3"
               onClick={onClose}
             >
               Solicitar Orçamento
               <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               variant="outline"
               className="flex-1 py-3"
               onClick={onClose}
