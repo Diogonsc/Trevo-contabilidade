@@ -1,70 +1,15 @@
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import {
   Phone,
   Mail,
   MapPin,
   Clock,
-  Send,
-  CheckCircle,
   Coffee,
 } from "lucide-react";
 
 export function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    company: "",
-    service: "",
-    message: "",
-  });
-
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleInputChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Aqui você implementaria a lógica de envio
-    console.log("Form submitted:", formData);
-    setIsSubmitted(true);
-
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        company: "",
-        service: "",
-        message: "",
-      });
-    }, 3000);
-  };
-
   const contactInfo = [
     {
       icon: Phone,
@@ -91,45 +36,6 @@ export function Contact() {
       description: "8h às 18h",
     },
   ];
-
-  const services = [
-    "Contabilidade Geral",
-    "Abertura de Empresas",
-    "Planejamento Tributário",
-    "Compliance Fiscal",
-    "Departamento Pessoal",
-    "Consultoria Empresarial",
-  ];
-
-  if (isSubmitted) {
-    return (
-      <section className="py-16 lg:py-24 bg-section-background">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <Card>
-            <CardContent className="p-12">
-              <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <CheckCircle className="w-10 h-10 text-green-600" />
-              </div>
-              <h2 className="text-2xl lg:text-3xl font-zurich-bold text-foreground mb-4">
-                Mensagem Enviada com Sucesso!
-              </h2>
-              <p className="font-zurich-regular text-muted-foreground mb-6">
-                Obrigado pelo seu interesse! Nossa equipe entrará em contato em
-                breve para discutir como podemos ajudar seu negócio.
-              </p>
-              <Badge
-                variant="secondary"
-                className="inline-flex items-center px-4 py-2 bg-primary/10 text-primary"
-              >
-                <Coffee className="w-4 h-4 mr-2" />
-                Pega seu café e aguarde nosso contato!
-              </Badge>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-    );
-  }
 
   return (
     <section className="py-16 lg:py-24 bg-section-background">
