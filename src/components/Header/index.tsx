@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useCallback, useMemo } from "react";
-import { Menu, Home, Briefcase, Users, FileText, HelpCircle, Phone, Mail, MapPin, X, ChevronRight } from "lucide-react";
+import { Menu, Home, Briefcase, Users, HelpCircle, Phone, Mail, MapPin, X, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -20,7 +20,7 @@ export function Header() {
     { label: "Início", href: "#hero", icon: Home },
     { label: "Serviços", href: "#servicos", icon: Briefcase },
     { label: "Sobre", href: "#sobre", icon: Users },
-    { label: "Blog", href: "#blog", icon: FileText },
+    // { label: "Blog", href: "#blog", icon: FileText },
     { label: "FAQ", href: "#faq", icon: HelpCircle },
     { label: "Contato", href: "#contato", icon: Phone },
   ], []);

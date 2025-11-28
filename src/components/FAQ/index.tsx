@@ -108,19 +108,6 @@ export function FAQ() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
-                variant="secondary"
-                className="bg-background text-foreground hover:bg-background/90 uppercase font-zurich-bold tracking-wider"
-                onClick={() => {
-                  window.open(
-                    "https://api.whatsapp.com/send?phone=552135472077&text=Olá, gostaria de falar com um especialista",
-                    "_blank"
-                  );
-                }}
-              >
-                Fale conosco!
-              </Button>
-              <Button
-                size="lg"
                 variant="outline"
                 className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 uppercase font-zurich-bold tracking-wider"
                 onClick={() => {

@@ -5,9 +5,7 @@ import {
   Phone,
   MapPin,
   Coffee,
-  Star,
   Users,
-  Award,
   CheckCircle,
 } from "lucide-react";
 
@@ -84,18 +82,7 @@ export function Hero() {
               className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 animate-slide-up"
               style={{ animationDelay: "0.6s" }}
             >
-              <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-full px-3 sm:px-4 py-2">
-                <Star className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1.5 sm:mr-2 text-yellow-400 fill-current flex-shrink-0" />
-                <span className="text-sm sm:text-sm font-zurich-bold text-white whitespace-nowrap">
-                  4.9/5 Avaliação
-                </span>
-              </div>
-              <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-full px-3 sm:px-4 py-2">
-                <Award className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1.5 sm:mr-2 text-green-400 flex-shrink-0" />
-                <span className="text-sm sm:text-sm font-zurich-bold text-white whitespace-nowrap">
-                  Certificado CRC
-                </span>
-              </div>
+             
               <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-full px-3 sm:px-4 py-2">
                 <CheckCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1.5 sm:mr-2 text-green-400 flex-shrink-0" />
                 <span className="text-sm sm:text-sm font-zurich-bold text-white whitespace-nowrap">

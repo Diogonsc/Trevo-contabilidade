@@ -55,9 +55,9 @@ export function Footer() {
 							<a href="#" className="block text-sm font-zurich-regular text-muted hover:text-primary transition-colors">
 								Contato
 							</a>
-							<a href="#" className="block text-sm font-zurich-regular text-muted hover:text-primary transition-colors">
+							{/* <a href="#" className="block text-sm font-zurich-regular text-muted hover:text-primary transition-colors">
 								Blog
-							</a>
+							</a> */}
 							</nav>
 						</div>
 

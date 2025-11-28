@@ -5,7 +5,7 @@ import { BackToTop } from "./components/BackToTop"
 import { Hero } from "./components/Hero"
 import { Services } from "./components/Services"
 import { About } from "./components/About"
-import { Blog } from "./components/Blog"
+// import { Blog } from "./components/Blog"
 import { FAQ } from "./components/FAQ"
 import { Contact } from "./components/Contact"
 import  {WhatsAppButton } from "./components/WhatsAppButton"
@@ -24,9 +24,9 @@ function App() {
         <section id="sobre">
           <About />
         </section>
-        <section id="blog">
+        {/* <section id="blog">
           <Blog />
-        </section>
+        </section> */}
         <section id="faq">
           <FAQ />
         </section>

@@ -25,11 +25,6 @@ export function Services() {
   const [selectedService, setSelectedService] = useState<Service | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleServiceClick = (service: Service) => {
-    setSelectedService(service);
-    setIsModalOpen(true);
-  };
-
   const handleCloseModal = () => {
     setIsModalOpen(false);
     setSelectedService(null);
@@ -128,18 +123,6 @@ export function Services() {
                     </div>
                   ))}
                 </div>
-
-                <div className="space-y-3 mt-auto">
-                  <Button
-                    variant="default"
-                    size="sm"
-                    className="w-full bg-primary text-primary-foreground hover:bg-primary/90 py-3 px-4 min-h-[44px] uppercase font-zurich-bold tracking-wider"
-                    onClick={() => handleServiceClick(service)}
-                  >
-                    Saiba mais
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
-                </div>
               </CardContent>
             </Card>
           ))}
@@ -170,7 +153,17 @@ export function Services() {
               variant="outline"
               className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 uppercase font-zurich-bold tracking-wider"
               onClick={() => {
-                window.open('https://api.whatsapp.com/send?phone=552135472077&text=Olá, gostaria de falar com um especialista', '_blank');
+                const element = document.querySelector('#sobre');
+                if (element) {
+                  const headerHeight = 64; // Altura do header (h-16 = 64px)
+                  const elementPosition = element.getBoundingClientRect().top;
+                  const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+
+                  window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                  });
+                }
               }}
             >
               Sobre a Trevo

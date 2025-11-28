@@ -55,7 +55,6 @@ export function About() {
     { number: "30+", label: "Anos de Experiência" },
     { number: "500+", label: "Empresas Atendidas" },
     { number: "100%", label: "Clientes Satisfeitos" },
-    { number: "24/7", label: "Suporte Disponível" },
   ];
 
   const testimonials = [
@@ -232,7 +231,7 @@ export function About() {
           <h3 className="text-2xl lg:text-3xl font-zurich-bold text-center text-foreground mb-12">
             Números que Comprovam Nossa Excelência
           </h3>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
             {achievements.map((achievement, index) => (
               <div key={index} className="text-center">
                 <div className="text-3xl lg:text-4xl font-zurich-black text-primary mb-2">

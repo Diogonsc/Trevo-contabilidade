@@ -15,7 +15,7 @@ export function Contact() {
       icon: Phone,
       title: "Telefone",
       info: "+55 21 3547-2077",
-      description: "Segunda a Sexta, 8h às 18h",
+      description: "Segunda a Sexta, 9h às 17h",
     },
     {
       icon: Mail,
@@ -33,7 +33,7 @@ export function Contact() {
       icon: Clock,
       title: "Horário de Funcionamento",
       info: "Segunda a Sexta",
-      description: "8h às 18h",
+      description: "9h às 17h",
     },
   ];
 
@@ -51,8 +51,8 @@ export function Contact() {
           </Badge>
 
           <h2 className="text-3xl lg:text-5xl font-zurich-bold text-foreground mb-6">
-            Vamos conversar sobre seu{" "}
-            <span className="text-primary">negócio?</span>
+            Fale{" "}
+            <span className="text-primary">conosco</span>
           </h2>
 
           <p className="text-xl font-zurich-regular text-muted-foreground max-w-3xl mx-auto">
