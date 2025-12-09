@@ -51,8 +51,7 @@ export function Contact() {
           </Badge>
 
           <h2 className="text-3xl lg:text-5xl font-zurich-bold text-foreground mb-6">
-            Fale{" "}
-            <span className="text-primary">conosco</span>
+            Fale conosco
           </h2>
 
           <p className="text-xl font-zurich-regular text-muted-foreground max-w-3xl mx-auto">

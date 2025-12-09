@@ -1,5 +1,6 @@
 import logo from "/logotipo.png"
-import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Clock } from "lucide-react"
+import { Instagram, Mail, MapPin, Phone, Clock } from "lucide-react"
+import { FaWhatsapp } from "react-icons/fa6";
 
 export function Footer() {
 	return (
@@ -16,14 +17,7 @@ export function Footer() {
 							{/* Redes Sociais */}
 							<div className="flex space-x-4">
 								<a 
-									href="#" 
-									className="text-muted hover:text-primary transition-colors"
-									aria-label="Facebook"
-								>
-									<Facebook size={20} />
-								</a>
-								<a 
-									href="#" 
+									href="https://www.instagram.com/trevo_contabilidade/" 
 									className="text-muted hover:text-primary transition-colors"
 									aria-label="Instagram"
 								>
@@ -32,9 +26,12 @@ export function Footer() {
 								<a 
 									href="#" 
 									className="text-muted hover:text-primary transition-colors"
-									aria-label="LinkedIn"
+									aria-label="WhatsApp"
+									onClick={() => {
+										window.open("https://wa.me/+552135472077", "_blank");
+									}}
 								>
-									<Linkedin size={20} />
+									<FaWhatsapp size={20} />
 								</a>
 							</div>
 						</div>

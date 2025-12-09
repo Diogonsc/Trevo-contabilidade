@@ -202,6 +202,44 @@
     background-clip: text;
   }
   
+  /* Highlight sutil para textos importantes - estilo marcador elegante */
+  .text-highlight {
+    position: relative;
+    color: white;
+    font-weight: 700;
+    padding: 0 0.15rem;
+    display: inline-block;
+  }
+  
+  .text-highlight::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0.15em;
+    height: 0.35em;
+    background: oklch(49.147% 0.08223 150.686 / 0.25);
+    border-radius: 2px;
+    z-index: -1;
+    transition: all 0.3s ease;
+  }
+  
+  .text-highlight:hover::after {
+    background: oklch(49.147% 0.08223 150.686 / 0.35);
+    height: 0.4em;
+  }
+  
+  /* Fallback para navegadores que não suportam oklch */
+  @supports not (color: oklch(0.5 0.1 150)) {
+    .text-highlight::after {
+      background: rgba(76, 175, 80, 0.25);
+    }
+    
+    .text-highlight:hover::after {
+      background: rgba(76, 175, 80, 0.35);
+    }
+  }
+  
   .animate-fade-in {
     animation: fadeIn 0.6s ease-in-out;
   }

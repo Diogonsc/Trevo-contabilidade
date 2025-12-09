@@ -50,7 +50,7 @@ export function Hero() {
                 style={{ animationDelay: "0.2s" }}
               >
                 Muito mais que um{" "}
-                <span className="text-primary drop-shadow-lg stroke-text">
+                <span className="text-highlight">
                   escritório de contabilidade,
                 </span>
                 {" "}
@@ -58,7 +58,7 @@ export function Hero() {
                   somos o parceiro certo para fazer sua
                 </span>
                 {" "}
-                <span className="text-primary drop-shadow-lg stroke-text">
+                <span className="text-highlight">
                   empresa
                 </span>
                 {" "}
